@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="fontawesome-5.15.4/css/all.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="dir container">
+			<div class="navbar navbar-dark bg-primary fixed-top">
+				<input class="btn btn-primary" id="fileselector" type="file" onchange="browseResult(event)" webkitdirectory directory multiple="true" accept="audio/*"/>
+			</div>
+			<div id="list" class="list-group">
+			</div>
+		</div>
+		<div class="player">
+			<div class="controls">
+				<p id="title"></p>
+				<div class="actions">
+					<span id="currtime">00:00</span>
+					<input class="form-range" id="timer" type="range" min="0" max="100" step="0.1" value="0" />
+					<span id="endtime">00:00</span>
+				</div>
+				<div class="vol-speed">
+					<div id="speed">
+						<i class="fas fa-tachometer-alt"></i>	
+						<input class="form-range" id="speedrange" type="range" min="0.6" max="2" step="0.1" value="1" onchange="speed()">
+						<span id="speedval">1.0</span>
+					</div>
+					<div id="othercom">
+						<i class="fas fa-sync-alt" onclick="loop()"></i>
+						<i class="fas fa-step-backward" onclick="back()"></i>
+						<i id="audiosbl" class="btn fas fa-play-circle" onclick="playpause()"></i>
+						<i class="fas fa-step-forward" onclick="next()"></i>
+						<i class="fas fa-random"></i>
+					</div>
+					<div id="vol">
+						<i id="audioico" class="fas fa-volume-up" onclick="mute()"></i>
+						<input class="form-range" id="volume" type="range" min="0" max="100" step="1" value="100" onchange="volume()">
+						<span id="volval">100%</span>
+					</div>
+				</div>
+			</div>
+			<audio id="audio" autoplay>
+			</audio>
+		</div>
+
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

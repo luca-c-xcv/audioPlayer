@@ -1,0 +1,104 @@
+body
+{
+	background: #262626;
+}
+
+.player
+{
+	z-index: 99999;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	background: #3e3e3e;
+	border-radius: 13px;
+	padding: 0.75;
+	color: white;
+	width: 100%;
+}
+
+#audiosbl
+{
+	color:white;
+	font-size: 35px;
+}
+
+
+.actions
+{
+	text-align: center;
+}
+
+#timer
+{
+	width: 70%;
+	margin: 0 20px;
+}
+
+.form-range
+{
+	vertical-align: middle;
+}
+
+span
+{
+	padding: .375rem .75rem;
+}
+
+#vol
+{
+	width: max-content;
+	margin: 0 auto;
+}
+i
+{
+	padding: .375rem .75rem;
+}
+
+
+#speed
+{
+	width: max-content;
+	margin: 0 auto;
+}
+
+.vol-speed
+{
+	display: flex;
+}
+
+.controls > *
+{
+	margin: 35px 0;
+}
+
+
+#list
+	{ 
+		overflow-x: scroll;
+		overflow-y: hidden;
+		margin-bottom:240px;
+		margin-top: 70px;
+
+	}
+
+#fileselector
+{
+	margin: auto;
+}
+
+.fa-music
+	{
+		margin-right: 20px;
+	}
+
+.list-group
+	{
+		color:white;
+	}
+
+.list-group-item-dark
+	{
+		background-color: rgba(0,0,0,0);
+		border-color: rgb(64, 64, 64);
+		border-radius: 6px;
+	}
